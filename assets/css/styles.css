@@ -14,15 +14,16 @@ body{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #f5f5f5;
     display: grid;
-    grid-auto-columns: repeat(4,auto);
-    grid-auto-rows: minmax(25px,auto);
+    grid-template-columns: repeat(4,25%);
+    grid-template-areas: 'header', 'toolbar', 'main', 'footer';
 }
 
 /**Header**/
 
 header{
     background-color: #fff159;
-    grid-column: 1/4;
+    grid-area: 'header';
+    grid-column: 1/5;
     grid-row: 1;
     display: flex;
     width: 100%;
@@ -35,6 +36,7 @@ header{
     width: 44px;
     height: 32px;
     text-decoration: none;
+    margin-right: 8px;
     background-size: 44px 31px;
     flex-grow: 0;
     display: inline-block;
@@ -55,7 +57,6 @@ header{
 .logo-search{
     display: inherit;
     width: 100%;
-    gap: 8px;
     align-items: center;
 }
 
@@ -64,13 +65,13 @@ header{
     display: flex;
     align-items: center;
     height: 48px;
-    width: 80%;
+    width: 100%;
     border-radius: 2px;
 }
 
 input[type=text]{
     width: 100%;
-    max-width: 90vh;
+    max-width: 100%;
     box-sizing: border-box;
     flex-grow: 1;
 }
@@ -143,14 +144,16 @@ input[type=text]{
 /**Main**/
 
 main{
-    grid-column: 1/4;
+    grid-column: 1/5;
     grid-row: 3;
+    grid-area: 'main';
 }
 /**Toolbar**/
 .toolbar{
     display: flex;
-    grid-column: 1/4;
+    grid-column: 1/5;
     grid-row: 2;
+    grid-area: 'toolbar';
     padding: 10px 0px;
     background-color: white;
     justify-content: center;
@@ -438,7 +441,8 @@ main{
 
 footer{
     display: flex;
-    grid-column: 1/4;
+    grid-column: 1/5;
+    grid-area: 'footer';
     grid-row: 4;
     justify-content: center;
     align-items: center;
@@ -458,5 +462,80 @@ footer span{
     text-align: center;
 }
 
+/**Tablet**/
+@media only screen and (min-width: 576px) and (max-width: 992px){
 
+    body{
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 'header', 'toolbar', 'main', 'footer';
+        justify-content: stretch;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    header, .toolbar, main, footer{
+        grid-column:1/5;
+
+    }
+
+    header{
+        grid-area: 'header';
+        grid-row: 1;
+    }
+
+    .toolbar{
+        grid-row: 2;
+        grid-area: 'toolbar';
+    }
+
+    main{
+        grid-row: 3;
+        grid-area: 'main';
+    }
+
+    footer{
+        grid-row: 4;
+        grid-area: 'footer';
+    }
+
+    .nav-search{
+        width: 100%;
+    }
+
+    input[type=text]{
+        max-width: 100%;
+    }
+
+    .cards-products{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+
+    .card-content{
+        flex-direction: column;
+    }
+
+    .card-item{
+        padding: 12px 16px;
+        border-top: none;
+        box-shadow: none;
+    }
+
+    .card-item:nth-of-type(2n){
+        border-left: 1px solid #f5f5f5;
+    }
+
+    .card-image{
+        width: 100%;
+    }
+}
+
+/**Desktop**/
+@media only screen and (min-width: 993px){
+/**falta hacer todo el grid de esto y css de toolbar**/
+}
 
