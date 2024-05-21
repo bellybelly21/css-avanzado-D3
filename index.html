@@ -12,14 +12,20 @@
 <body>
 
     <header>
+    <div class="header-rows"> 
         <div class="first-row">
             <div class="logo-search">
-                <a class="logo" href="//www.mercadolibre.cl">Mercado Libre </a>
+                <div class="logo-container">
+                    <a class="logo" href="//www.mercadolibre.cl">Mercado Libre </a>
+                </div>
                 <form class="nav-search">
                     <input type="text" class="search-input" placeholder="Estoy buscando..." value="auto a batería niño">
                     <button type="submit" class="search-input-btn" aria-label="Buscar"><span class="material-symbols-outlined">
                     search</span></button>
                 </form>
+                <div class="meli d-hidden">
+                    <img src="assets\img\D_NQ_729450-MLA76155517591_052024-OO.webp" width="340" height="39">
+                </div>
             </div>
 
             <div class="icons-nav">
@@ -33,8 +39,55 @@
                 <span class="material-symbols-outlined icon-location">location_on</span>
                 <p>Ingresa tu dirección</p>
             </div>
+            <div class="nav-sr-desktop d-hidden">
+                <ol class="ol-sr-desktop">
+                    <li>
+                        <p>Categorías</p>
+                        <span class="material-symbols-outlined">
+                            keyboard_arrow_down
+                        </span>
+                    </li>
+
+                    <li>
+                        <p>Ofertas</p>
+                    </li>
+
+                    <li>
+                        <p>Historial</p>
+                    </li>
+
+                    <li>
+                        <p>Supermercado</p>
+                    </li>
+
+                    <li>
+                        <p>Moda</p>
+                    </li>
+
+                    <li>
+                        <p>Mercado Play</p>
+                    </li>
+
+                    <li>
+                        <p>Vender</p>
+                    </li>
+
+                    <li>
+                        <p>Ayuda</p>
+                    </li>
+                </ol>
+            </div>
+            <div class="nav-sr-desktop-mi-cuenta d-hidden">
+                <ol class="ol-sr-desktop-mi-cuenta">
+                    <li>Crea tu cuenta</li>
+                    <li>Ingresa</li>
+                    <li>Mis compras</li>
+                    <li><span class= "material-symbols-outlined icon-cart">shopping_cart</span></li>
+                </ol>
+            </div>
             <span class="material-symbols-outlined icon-arrow">arrow_forward_ios</span>
         </div>
+    </div>
     </header>
     
         <ul class="toolbar">
@@ -57,26 +110,39 @@
         </ul>
 
         <ul class="toolbar-desktop d-hidden">
-            <li>
-                Llegan hoy
-                <img src="assets\img\toggle_off_24dp_FILL1_wght200_GRAD0_opsz24.svg" height="32px">
+            <div class="titles-h1 d-hidden">
+                <h1 class="title-h1-desktop">
+                    Auto batería niño
+                </h1>
+                <p class="cant-productos d-hidden">1.120 resultados</p>
+            </div>
+            <hr>
+            <li class="switch-toolbar">
+                <p>Llegan hoy</p>
+                <img src="assets\img\toggle_off_24dp_FILL1_wght200_GRAD0_opsz24.svg" height="40px">
             </li>
-            <li>
-                <span class="full-envio"><svg class="icon-full" viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 0h12.8l-6.4 11.429h10.667l-17.067 20.571 4.267-13.714h-10.667l6.4-18.286zM34.626 23.467h-4.77l4.077-18.498h13.562l-0.915 4.16h-8.791l-0.61 2.884h8.57l-0.915 4.16h-8.597l-1.609 7.294zM57.687 23.799c-5.685 0-8.486-2.718-8.486-6.601 0-0.305 0.083-0.943 0.139-1.22l2.441-11.010h4.853l-2.413 10.899c-0.028 0.139-0.083 0.444-0.083 0.777 0.028 1.525 1.193 2.995 3.55 2.995 2.551 0 3.855-1.609 4.326-3.772l2.413-10.899h4.826l-2.413 10.982c-0.998 4.493-3.439 7.849-9.152 7.849zM82.33 23.467h-12.203l4.077-18.498h4.77l-3.134 14.338h7.405l-0.915 4.16zM98.596 23.467h-12.203l4.077-18.498h4.77l-3.134 14.338h7.405l-0.915 4.16z"></path></svg>te da envío gratis</span>
-                <p>En carritos desde $ 19.990</p>
-                <img src="assets\img\toggle_off_24dp_FILL1_wght200_GRAD0_opsz24.svg" height="32px">
+            <li class="switch-toolbar">
+                <div class="text-switch">
+                    <span class="full-envio"><svg class="icon-full" viewBox="0 0 100 32" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 0h12.8l-6.4 11.429h10.667l-17.067 20.571 4.267-13.714h-10.667l6.4-18.286zM34.626 23.467h-4.77l4.077-18.498h13.562l-0.915 4.16h-8.791l-0.61 2.884h8.57l-0.915 4.16h-8.597l-1.609 7.294zM57.687 23.799c-5.685 0-8.486-2.718-8.486-6.601 0-0.305 0.083-0.943 0.139-1.22l2.441-11.010h4.853l-2.413 10.899c-0.028 0.139-0.083 0.444-0.083 0.777 0.028 1.525 1.193 2.995 3.55 2.995 2.551 0 3.855-1.609 4.326-3.772l2.413-10.899h4.826l-2.413 10.982c-0.998 4.493-3.439 7.849-9.152 7.849zM82.33 23.467h-12.203l4.077-18.498h4.77l-3.134 14.338h7.405l-0.915 4.16zM98.596 23.467h-12.203l4.077-18.498h4.77l-3.134 14.338h7.405l-0.915 4.16z"></path></svg><p>te da envío gratis</p></span>
+                    <span>En carritos desde $ 19.990</span>
+                </div>
+                <img src="assets\img\toggle_off_24dp_FILL1_wght200_GRAD0_opsz24.svg" height="40px">
             </li>
-            <li>
-                Envío gratis
-                <img src="assets\img\toggle_off_24dp_FILL1_wght200_GRAD0_opsz24.svg" height="32px">
+            <li class="switch-toolbar">
+                <p>Envío gratis</p>
+                <img src="assets\img\toggle_off_24dp_FILL1_wght200_GRAD0_opsz24.svg" height="40px">
             </li>
-            <li>
-                <img src="assets\img\international-filter-cbt.svg" width="156" height="16">
-                <span>Miles de productos del mundo a tu casa</span>
-
+            <li class="switch-toolbar">
+                <span class="block">
+                    <img src="assets\img\international-filter-cbt.svg" width="156" height="16">
+                    <span>Miles de productos del mundo a tu casa</span>
+                </span>
+                <img src="assets\img\toggle_off_24dp_FILL1_wght200_GRAD0_opsz24.svg" height="40px">
             </li>
+            <hr>
             <li>
                 <ol class="ol-tipo-vehiculo list-on-list">
+                    <h4>Tipo de vehículo</h4>
                     <li>Auto <span>(223)</span></li>
                     <li>Vehiculos de juguete sin control remoto <span>(39)</span></li>
                     <li>Camioneta <span>(21)</span></li>
@@ -90,6 +156,7 @@
             </li>
             <li>
                 <ol class="ol-edad-minima list-on-list">
+                    <h4>Edad mínima</h4>
                     <li>Menos de 2 años <span>(116)</span></li>
                     <li>2 años <span>(76)</span></li>
                     <li>3 años <span>(110)</span></li>
@@ -98,6 +165,7 @@
             </li>
             <li>
                 <ol class="ol-marca list-on-list">
+                    <h4>Marca</h4>
                     <li>Genérica <span>(213)</span></li>
                     <li>Bebesit <span>(47)</span></li>
                     <li>Jeep <span>(18)</span></li>
@@ -110,12 +178,14 @@
             </li>
             <li>
                 <ol class="ol-condicion list-on-list">
+                    <h4>Condición</h4>
                     <li>Nuevo <span>(1.113)</span></li>
                     <li>Usado <span>(26)</span></li>
                 </ol>
             </li>
             <li>
                 <ol class="ol-origen-envio list-on-list">
+                    <h4>Origen de envío</h4>
                     <li>Internacional <span>(825)</span></li>
                     <li>Local <span>(280)</span></li>
                 </ol>
